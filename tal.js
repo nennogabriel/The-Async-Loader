@@ -38,16 +38,15 @@ var tal = (function(){
         }
     }
 
-    function ready(values, callback, count){
+    function ready(values, callback){
         var list = (typeof values == "string" ? [values] : values );
-        count = count || 0;
         for(var i in list){
             if(_ready.indexOf(list[i]) < 0){
-                setTimeout(function () { ready(list, callback, count+1)}, 99);
+                setTimeout(function () { ready(list, callback)}, 9);
                 return;
             }
         }
-        setTimeout(callback, 99);
+        setTimeout(callback, 9);
     }
     return {
         ready: ready,
