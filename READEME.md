@@ -9,18 +9,18 @@ Include the minified version in the head for best performance.
 ###sumary
 **url :** local link or external link for especific file
 
-**unique-name :** name to be used when referenced in **list-of-dependances**
+**unique-name :** name to be used when referenced in **list-of-dependencies**
  
 **list-of-dependances :** list of string names or just a string name passed as **unique-name** to a **url** 
 
 Load a file asynchronously:
 
-``tal.load( url, unique-name, [optional list-of-dependances]);``
+``tal.load( url, unique-name, [optional list-of-dependencies]);``
 
 
 Execute only after the librarie was loaded
 
-``tal.ready(list-of-dependances, function);``
+``tal.ready(list-of-dependencies, function);``
 
 
 ####Eg.
