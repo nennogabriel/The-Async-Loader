@@ -24,15 +24,15 @@ var tal = (function(){
         document.getElementsByTagName('head')[0].appendChild(el);
     }
 
-    function load(url, reference, dependances) {
+    function load(url, reference, dependencies) {
         if(typeof reference == "string"){
             if(_query.indexOf(reference) >= 0){return;}
             _query.push(reference);
         }
-        if(typeof dependances == "undefined"){
+        if(typeof dependencies == "undefined"){
             _get(url, reference);
         } else {
-            ready(dependances, function(){
+            ready(dependencies, function(){
                 _get(url, reference)
             });
         }
